@@ -1,0 +1,81 @@
+.ladi-introduce{
+    background: rgba(228, 228, 228, 1);
+    height: 645px;
+}
+
+.ladi-introduce-row{
+    width: 100%;
+    position: absolute;
+    top: 56px;
+
+    display: flex;
+}
+
+.ladi-introduce-col{
+    width: 50%;
+    
+}
+
+.ladi-introduce-header{
+    h2{
+        font-size: 29px;
+        color: rgb(142, 12, 12);
+    }
+}
+
+.ladi-introduce-content{
+    position: absolute;
+    top: 82px;
+    width: 434px;
+    p{
+        text-align: left;
+        letter-spacing: 1px;
+    }
+}
+
+.ladi-introduce-list{
+    position: absolute;
+    top: 295px;
+    left: 128px;
+
+}
+
+.ladi-row{
+    display: flex;
+    .ladi-col{
+        width: 45%;
+    }
+}
+
+.ladi-img1-introduce{
+    height: 173px;
+    margin-right: 10px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    background-attachment: scroll;
+    background-origin: content-box;
+    background-image: url('https://w.ladicdn.com/s650x500/62df85ef0af80500167afcc9/dji_0521-copy-20220801022739.jpg');
+}
+.ladi-img2-introduce{
+    height: 173px;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    background-attachment: scroll;
+    background-origin: content-box;
+    background-image: url('https://w.ladicdn.com/s600x500/62df85ef0af80500167afcc9/291878225_560359172433299_4973496161082388670_n-20220728065018.jpg');
+}
+
+
+.ladi-img3-introduce{
+    margin-top: 12px;
+    height: 334px;
+    width: 90%;
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+    background-attachment: scroll;
+    background-origin: content-box;
+    background-image: url('https://w.ladicdn.com/s900x650/62df85ef0af80500167afcc9/z3726402778549_ad3c97bc2a693dfed29b28e52e719c5d-20220919083746-vxk_m.jpg');
+}

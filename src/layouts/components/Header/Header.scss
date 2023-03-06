@@ -1,0 +1,84 @@
+.ladi-header{
+    height: 77px;
+    display: flex;
+    position: relative;
+}
+
+.ladi-logo{
+    position: absolute;
+    height: 100%;
+    top: -63px;
+    left: -85px;
+
+    &__img{
+        width: 295px;
+        height: 118px;
+        background-image: url('https://w.ladicdn.com/s600x450/62df85ef0af80500167afcc9/slide1-20220920063215-ftwr6.png');
+
+        background-repeat: no-repeat;
+        background-position: left top;
+        background-size: cover;
+        background-attachment: scroll;
+        background-origin: content-box;
+        position: absolute;
+    }
+}
+.ladi-nav{
+    height: 40px;
+    position: absolute;
+    left: 255px;
+    top: 10px;
+    
+    ul{
+    }
+
+    li{     
+        width: 90px;
+        position: relative;
+        height: 40px;   
+        display: inline-block;
+        list-style-type: none;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        text-align: center;
+
+        :active{
+            transform: translateY(2px);
+            transition: transform .2s linear;
+        }
+    }
+
+    p{
+        display: inline-block;
+        justify-items: center;
+        height: 27px;
+        border-right: 1px solid #ccc;
+        margin: 0 30px 5px;
+        
+    }
+}
+.btn-language{
+    height: 100%;
+    position: absolute;
+    right:-20px;
+    top: 14px;
+
+    :active{
+        transform: translateY(2px);
+        transition: transform .2s linear;
+    }
+    
+}
+
+.ladi-header-text{
+    position: absolute;
+    top: 55px;
+    p{
+        color: rgb(23, 65, 137);
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.6;
+    }
+
+}

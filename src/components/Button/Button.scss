@@ -1,0 +1,20 @@
+.ladi-btn{
+    width: 120px;
+    height: 40px;
+    background-color: rgb(244, 64, 37);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 100px;
+    color: white;
+    font-weight: bold;
+    
+    :hover{
+        cursor: pointer;
+    }
+    p{
+        
+    }
+}
