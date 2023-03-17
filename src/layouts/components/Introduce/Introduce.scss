@@ -1,22 +1,37 @@
+$tablet-width : 740px;
+$desktop-width: 1024px;
+
+@mixin mobile { @media (max-width: #{$tablet-width - 1px}) {     
+  @content;   
+ } 
+}  
+
+@mixin tablet { @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {       
+   @content;   
+ } 
+}  
+
+@mixin desktop {   @media (min-width: #{$desktop-width}) {     
+  @content;  
+ } 
+}
 .ladi-introduce{
     background: rgba(228, 228, 228, 1);
-    height: 645px;
 }
 
 .ladi-introduce-row{
     width: 100%;
-    position: absolute;
-    top: 56px;
-
     display: flex;
+    padding: 40px 0;
 }
 
 .ladi-introduce-col{
     width: 50%;
-    
 }
 
 .ladi-introduce-header{
+    cursor: default;
+
     h2{
         font-size: 29px;
         color: rgb(142, 12, 12);
@@ -24,19 +39,29 @@
 }
 
 .ladi-introduce-content{
-    position: absolute;
-    top: 82px;
-    width: 434px;
+    cursor: default;
+    // position: absolute;
+    // top: 82px;
+    box-sizing: border-box;
+    padding: 15px 15px 15px 0;
+    width: 100%;
+    // width: 434px;
     p{
         text-align: left;
         letter-spacing: 1px;
     }
+
+    @include tablet{
+        font-size: 14px;
+    }
 }
 
 .ladi-introduce-list{
-    position: absolute;
-    top: 295px;
-    left: 128px;
+    // position: absolute;
+    cursor: default;
+    margin-left: 100px;
+    // top: 295px;
+    // left: 128px;
 
 }
 

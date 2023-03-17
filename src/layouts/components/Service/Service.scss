@@ -1,0 +1,73 @@
+.ladi-service{
+    height: 383px;
+    width: 100%;
+    position: relative;
+}
+
+.ladi-service-bgcolor{
+    background-color: rgb(0, 0, 0);
+    filter: contrast(123%) brightness(53%) sepia(18%) grayscale(37%) invert(5%);
+    opacity: 0.93;
+
+    
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+.ladi-service-img{
+    position: absolute; 
+    height: 100%;
+    width: 100%;
+
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-origin: content-box;
+    background-position: center top;
+    background-size: auto 100%;
+    opacity: 0.5;
+    background-image: url('https://w.ladicdn.com/s700x1050/62df85ef0af80500167afcc9/logistics-la-gi-20221011031624-umdvn.jpg');
+}
+
+.ladi-service-wrap{
+    position: relative;
+}
+.ladi-service-title{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.ladi-service-header{
+    display: flex;  
+    cursor: default;
+    margin: 10px 0 30px;
+    h2{
+        font-size: 30px;
+        font-weight: bold;
+        color: #fff;
+        margin:  0 20px;
+    }
+    svg{
+        width: 40.9931px;
+        height: 39px;
+    }
+}
+
+
+.ladi-service-des{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+
+    margin-top: 15px;
+    cursor: default;
+    p{
+        width: 822px;
+        font-family: "Sriracha", cursive;   
+        color: rgb(255, 255, 255);
+        font-size: 17.45px;
+        line-height: 1.6;
+    }
+}

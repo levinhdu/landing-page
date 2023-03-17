@@ -1,0 +1,123 @@
+.ladi-footer{
+    background-color: rgb(23, 57, 101);
+
+}
+
+.ladi-footer-wrap{
+    position: relative;
+    padding-top: 67.0738px;
+    padding-left: 72px;
+}
+.ladi-footer-logo{
+    width: 187.682px;
+    height: 26.8507px;
+    &__bgimg{
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('https://w.ladicdn.com/s500x350/62df85ef0af80500167afcc9/logo-footer-20220729061757.png');
+    }
+}
+
+.ladi-footer-company{
+    margin-top: 22px;
+
+    h3{
+        width: 443px;
+        color: #fff;
+        font-size: 22px;
+        font-weight: bold;
+    }
+}
+
+
+
+.ladi-footer-contact{
+    margin-top: 36px;
+}
+.ladi-footer-contact-row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.ladi-footer-contact-col{
+    max-width: 384px;
+    margin-right: 90px; 
+    h6{
+        font-size: 10px;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    p{
+        
+        font-size: 10px;
+        letter-spacing: 0.2px;
+        color: #B4B4B4;
+        line-height: 1.6;
+    }
+}
+
+.ladi-footer-line{
+    width: 1022px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+    margin: 36px 0;
+}
+
+.ladi-footer-connect{
+    display: flex;
+}
+
+.ladi-footer-phone{
+    padding-left: 140px;
+    width: 33%;
+    display: flex;
+    &__icon{
+        width: 18.8364px;
+        height: 25.366px;
+        margin-right: 15px;
+        margin-top: 3px;
+    }
+    &__number{
+        color: #fff;
+        font-size: 15px;
+        margin-top: 3px;
+    }
+}
+
+.ladi-footer-email{
+    display: flex;
+    padding-left: 80px;
+    width: 33%;
+    &__icon{
+        width: 22.043px;
+        height: 23.3233px;
+        margin-right: 15px;
+    }
+    &__acc{
+        margin-top: 3px;
+        color: #fff;
+        font-size: 15px;
+    }
+}
+
+.ladi-footer-follow{
+    padding-left: 155px;
+    width: 33%;
+    display: flex;
+    &__logo{
+        width: 23.241px;
+        height: 28.6893px;
+        margin-right: 20px;
+    }
+}
+
+.ladi-fotter-headline{
+    margin-top: 50px;
+    margin-left: 50px;
+    padding-bottom: 10px;
+    p{
+        font-size: 9.88px;
+        color: #B4B4B4;
+    }
+}

@@ -1,84 +1,181 @@
+$desktop-width: 1430px;
+@mixin desktop { @media (max-width: #{$desktop-width}) {     
+  @content;  
+ } 
+}
+
 .ladi-header{
     height: 77px;
     display: flex;
+}
+
+.ladi-header-menu{
+    display: none;
+    ion-icon{
+        height: 77px;
+        line-height: 77px;
+        width: 55px;
+        padding: 0 20px;
+        margin-left: 100px;
+    }
+}
+.ladi-header-wrap{
     position: relative;
+    display: flex;
+    width: 100%;
+    
 }
 
 .ladi-logo{
-    position: absolute;
     height: 100%;
-    top: -63px;
-    left: -85px;
-
+    width: 290px;
+    
     &__img{
-        width: 295px;
-        height: 118px;
+        
+        width: 290px;
+        height: 50px;
         background-image: url('https://w.ladicdn.com/s600x450/62df85ef0af80500167afcc9/slide1-20220920063215-ftwr6.png');
 
         background-repeat: no-repeat;
-        background-position: left top;
-        background-size: cover;
-        background-attachment: scroll;
-        background-origin: content-box;
-        position: absolute;
+        background-position:50% 40%;
+        background-size: cover; 
+    }
+    &__text{
+        display: flex;
+        justify-content: center;
+        p{
+            color: rgb(23, 65, 137);
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 1.6;
+        }
     }
 }
 .ladi-nav{
     height: 40px;
-    position: absolute;
-    left: 255px;
-    top: 10px;
-    
-    ul{
-    }
+    margin-top: 15px;
 
-    li{     
+    &__intro:hover .modal-service{
+        display: block;
+    }
+    &__intro::after{
+        content: "";
+        position: absolute;
+        top: 5px;
+        right: 0;
+        border-left: 1px solid #ccc;
+        height: 27px;
+    }
+    &__intro{     
+        padding: 0 20px;
         width: 90px;
-        position: relative;
         height: 40px;   
         display: inline-block;
+
+        position: relative;
+
         list-style-type: none;
         font-size: 14px;
         font-weight: bold;
+
         cursor: pointer;
         text-align: center;
 
+        
         :active{
             transform: translateY(2px);
             transition: transform .2s linear;
         }
     }
 
-    p{
-        display: inline-block;
-        justify-items: center;
-        height: 27px;
-        border-right: 1px solid #ccc;
-        margin: 0 30px 5px;
-        
-    }
+
 }
 .btn-language{
-    height: 100%;
-    position: absolute;
-    right:-20px;
-    top: 14px;
+    display: flex;
+    align-items: center;
+    // height: 100%;
+    cursor: pointer;
+    margin-left: 50px;
 
     :active{
         transform: translateY(2px);
         transition: transform .2s linear;
     }
+
+    // @include desktop{
+    //     margin-left: 30px;
+    // }
     
 }
 
-.ladi-header-text{
-    position: absolute;
-    top: 55px;
-    p{
-        color: rgb(23, 65, 137);
-        font-size: 14px;
-        font-weight: bold;
-        line-height: 1.6;
-    }
 
+.modal-service{
+    display: none;
+    position: absolute;
+    left: 0;
+    width: 180px;
+    height: auto;
+    border-radius: 5px;
+    z-index: 1;
+    background-color: #fff;
+
+    li:hover{
+        background-color: rgba(125 , 125, 125,0.1);
+        border-radius: 5px;
+
+    }
+    li:hover .modal-service1{
+        display: block;
+    }
+    li{
+        list-style-type: none;
+        cursor: pointer;
+        width: 180px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+
+        a{
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+            color: rgb(23, 65, 137);
+            text-decoration: none;
+        }        
+    }
+}
+
+.modal-service1{
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 130px;
+    width: 180px;
+    height: auto;
+    border-radius: 5px;
+    z-index: 1;
+    background-color: #fff;
+
+    li:hover{
+        background-color: rgba(125 , 125, 125,0.1);
+        border-radius: 5px;
+
+    }
+    li{
+        list-style-type: none;
+        cursor: pointer;
+        width: 180px;
+        height: 40px;
+        a{
+            width: 100%;
+            display: block;
+            font-size: 12px;
+            font-weight: bold;
+            color: rgb(23, 65, 137);
+            text-decoration: none;
+            padding: 10px;
+        }        
+    }
 }

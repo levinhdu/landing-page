@@ -1,6 +1,7 @@
 .ladi-silde{
     height: 524px;
-    width: 100%;
+    width: 100vw;
+    max-width: 100%;
     position: relative;
 }
 .ladi-background-img{
@@ -11,12 +12,12 @@
     width: 100%;
 
     background-size: cover;
-    background-attachment: scroll;
-    background-origin: content-box;
+    // background-attachment: scroll;
+    // background-origin: content-box;
     background-image: url('https://w.ladicdn.com/s1440x524/62df85ef0af80500167afcc9/cang-dep-1508-3-20221010065830-ajwht.jpg');
     background-position: left top;
     background-repeat: no-repeat;
-    filter: contrast(110%);
+    // filter: contrast(110%);
 }
 
 .ladi-description{
@@ -24,6 +25,7 @@
     top: 316px;
     &__header{
         width: 456px;
+        cursor: default;
         h1{
             color: rgb(142, 12, 12);
             font-size: 36px;
@@ -37,6 +39,8 @@
         position: absolute;
         left: 60px;
         top: 113px;
+        cursor: default;
+
 
         width: 376px;
         color: rgb(255, 255, 255);

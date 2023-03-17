@@ -1,0 +1,88 @@
+.ladi-servicewrap{
+}
+.ladi-service-wrap{
+    width: 100%;
+    box-sizing: border-box;
+    padding: 45px 45px 10px;
+}
+
+.ladi-service-list{
+    display: flex;
+    // height: 555px;
+    justify-content: space-around;
+}
+.ladi-service-col{
+    width: 30%;
+}
+
+.ladi-service-content{
+    width: 100%;
+    &__img{
+        height: 338.768px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+.ladi-service-group{
+    width: 53.2783px;
+    height: 53.2784px;
+    position: absolute;
+
+    &__block{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 467%;
+        top: -26px;
+
+        border: 2px solid rgb(122, 186, 30);;
+        border-radius: 1000px;
+        background-color: #911710;
+    }
+
+    &__icon{
+        position: absolute; 
+        width: 22.4375px;
+        height: 24.0122px;
+        left: 500%;
+        top: -10px;
+    }
+}
+
+.ladi-service-headerline{
+    width: 287px;
+    cursor: default;
+    margin: 15px 0;
+    h6{
+        font-size: 16px;
+        color: #8E0C0C;
+    }
+}
+
+.ladi-service-textline{
+    width: 100%;
+    height: 95px;
+    cursor: default;
+    p{
+        font-size: 15px;
+        color: rgb(97, 97, 97);
+    }
+}   
+
+.ladi-service-readmore{
+    a{
+        color: #C74B16;
+        margin: 15px 0 20px;
+        display: block;
+        cursor: pointer;
+        text-decoration: underline;
+    }
+    &__line{
+        padding: 10px 0;
+        border-top: 2px solid #ccc;
+        width: 100%;
+    }
+
+}

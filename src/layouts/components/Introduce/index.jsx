@@ -6,7 +6,7 @@ Introduce.propTypes = {};
 
 function Introduce(props) {
   return (
-    <div className="ladi-introduce">
+    <div id="introduce" className="ladi-introduce">
       <div className="container">
         <div className="ladi-introduce-row">
           <div className="ladi-introduce-col">

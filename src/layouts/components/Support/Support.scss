@@ -1,0 +1,80 @@
+.ladi-support{
+    // height: 530.5px;
+    width: 100%;
+    background-color: rgb(238, 238, 238);
+    box-sizing: border-box;
+}
+
+.ladi-support-option{
+    width: 30%;
+    // height: 100%;
+}
+
+.ladi-support-title{
+    display: flex;
+    justify-content: center;
+    cursor: default;
+    h3{
+        margin-top: 38px;
+        font-size: 30px;
+        font-weight: bold;
+        color: #8E0C0C;
+    }
+}
+
+.ladi-support-group{
+    display: flex;
+    height: 453.3px;
+}
+
+.ladi-support-block{
+    display: flex;
+    margin: 40px 0 0 80px;
+    cursor: pointer;
+    
+
+    &__rectangle{
+        margin-top: 7px;
+        width: 147.648px;
+        height: 40.349px;
+
+        background-color: #fff;
+        border: 2px solid rgb(142, 12, 12); 
+        h3{          
+            padding: 7px 0 0 15px;  
+            font-size: 18px;
+            font-weight: bold;
+        }
+    }
+
+    &__circle{
+        width: 53.8313px;
+        height: 53.107px;
+        margin-left: -195px;
+
+        border: 2px solid rgb(142, 12, 12); 
+        border-radius: 1000px;
+
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}
+
+.ladi-support-calculator{
+    width: 70%;
+    height: 100%;
+
+    &__bgimg{
+        margin-top: 30px;
+        margin-left: 20px;
+
+        width: 80%;
+        height: 75%;
+    
+        
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image: url('https://w.ladicdn.com/s1000x650/62df85ef0af80500167afcc9/tau-20220919034905-fhamo.png');
+    }
+}

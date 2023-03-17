@@ -1,11 +1,1208 @@
+$tablet-width : 880px;
+$tablet1-width : 800px;
+$tablet2-width : 740px;
+$tablet3-width : 600px;
+$tablet4-width : 500px;
+
+$desktop-width: 1430px;
+$desktop1-width: 1310px;
+$desktop2-width: 1170px;
+$desktop3-width: 1080px;
+$desktop4-width: 950px;
+
+// @mixin mobile { @media (max-width: #{$tablet-width}) {     
+//   @content;   
+//  } 
+// }  
+
+
+
+@mixin desktop { @media (max-width: #{$desktop-width}) {     
+  @content;  
+ } 
+}
+@mixin desktop1 { @media (min-width: #{$desktop2-width}) and (max-width: #{$desktop1-width}) {     
+  @content;  
+ } 
+}
+
+@mixin desktop2 { @media (min-width: #{$desktop3-width}) and (max-width: #{$desktop2-width}) {     
+  @content;  
+ } 
+}
+
+@mixin desktop3 { @media (min-width: #{$desktop4-width}) and (max-width: #{$desktop3-width}) {     
+  @content;  
+ } 
+}
+@mixin desktop4 { @media (min-width: #{$tablet-width}) and (max-width: #{$desktop4-width}) {     
+  @content;  
+ } 
+}
+
+@mixin tablet { @media (min-width: #{$tablet1-width}) and (max-width: #{$tablet-width}) {       
+  @content;   
+} 
+}  
+
+@mixin tablet1 { @media (min-width: #{$tablet2-width}) and (max-width: #{$tablet1-width}) {     
+  @content;  
+ } 
+}
+@mixin tablet2 { @media (min-width: #{$tablet3-width}) and (max-width: #{$tablet2-width}) {     
+  @content;  
+ } 
+}
+@mixin tablet3 { @media (min-width: #{$tablet4-width}) and (max-width: #{$tablet3-width}) {     
+  @content;  
+ } 
+}
+
+
 *{
   margin: 0;
   padding: 0;
+  max-width: 100%;
 }
 
 .container {
-  width: 1200px;
   height: 100%;
-  margin: 0 auto;
-  position: relative;
+  padding: 0 160px;
+  @include desktop{
+    // width: 1200px;
+    height: 100%;
+    padding: 0 100px;
+     
+  }
+  @include desktop1{
+    height: 100%;
+    padding: 0 80px;
+    .ladi-nav{
+      &__intro{
+        padding:0 10px;
+      }
+    }
+
+    .ladi-service-group{
+      &__block{
+          left: 400%;
+      }
+
+      &__icon{
+
+          left: 430%;
+      }
+    }
+  }
+  @include desktop2{  
+    height: 100%;
+    padding: 0 80px;
+    .ladi-nav{
+      &__intro{
+        padding: 0 5px;
+      }
+    }
+    .btn-language{
+      margin-left: 10px;
+    }
+    .ladi-service-group{
+      &__block{
+          left: 350%;
+      }
+
+      &__icon{
+
+          left: 380%;
+      }
+    }
+
+    .ladi-service-content{
+      &__img{
+          height: 300px;
+      }
+    }
+
+    .ladi-port-cap-img{
+      height: 250px;
+    }
+
+    .ladi-port-cap-des{
+      &__content{
+        height: 130px;
+      }
+    }
+  }
+  @include desktop3{  
+    height: 100%;
+    padding: 0 80px;
+    max-width: 100%;
+    .ladi-inves-silde{
+      height: 360px;
+    }
+    
+    .btn-language{
+      display: none;
+    }
+    .ladi-nav{
+      &__intro{
+        padding:0 5px;
+      }
+    }
+
+    .ladi-service-group{
+      &__block{
+          left: 300%;
+      }
+
+      &__icon{
+
+          left: 330%;
+      }
+    }
+    .ladi-service-content{
+      &__img{
+          height: 290px;
+      }
+    }
+    .ladi-service-textline{
+      height: 130px;
+  }
+    .ladi-inves-boxslide{
+      top: 172px;
+      left: 250px;
+      height: 242.872px;
+      width: 259.245px; 
+  }
+  .ladi-port-cap-img{
+    height: 250px;
+  }
+  .ladi-port-cap-des{
+    &__content{
+      height: 130px;
+    }
+    
+  }
+  .ladi-support-calculator__bgimg {
+    width: 90%;
+    height: 68%;
+  }
+
+  .ladi-footer-phone{
+    
+    padding-left: 60px;
+  }
+  .ladi-footer-follow{
+    padding-left: 100px;
+  }
+
+  .ladi-inves-paragraph{
+    font-size: 13px;
+  }
+  } 
+  @include desktop4(){  
+    height: 100%;
+    padding: 0 40px;
+    max-width: 100%;
+    .ladi-header-wrap{
+      padding: 0 -40px;
+    }
+
+    .ladi-inves-silde{
+      height: 300px;
+    }
+    .ladi-inves-img{
+      &__bg{
+        width: 360px;
+      }
+    }
+    .ladi-inves-boxline{
+      width: 260.366px;
+      height: 96.8%;
+  }   
+    
+    .btn-language{
+      display: none;
+    }
+    .ladi-nav{
+      &__intro{
+        padding:0 5px;
+      }
+    }
+
+    .ladi-service-group{
+      &__block{
+          left: 200%;
+      }
+
+      &__icon{
+
+          left: 230%;
+      }
+    }
+    .ladi-service-content{
+      &__img{
+          height: 250px;
+      }
+    }
+    .ladi-service-headerline{
+      h6 {
+        margin-top: 40px;
+    }}
+    .ladi-service-textline{
+        height: 140px;
+    }
+
+    .ladi-port {
+        height: 500px;
+    }
+
+    .ladi-inves-boxslide{
+      top: 146px;
+      left: 250px;
+      height: 181.872px;
+      width: 206.245px;
+  }
+  .ladi-port-cap-img{
+    height: 200px;
+  }
+  .ladi-port-cap-des{
+    &__content{
+      height: 140px;
+    }
+    
+  }
+
+  .ladi-support-group {
+    height: 336.3px;
+  }
+
+  .ladi-support-calculator__bgimg {
+    width: 90%;
+    height: 77%;
+  }
+
+  .ladi-support-block__rectangle {
+    width: 120.648px;
+  }
+
+  .ladi-support-block__circle {
+    margin-left: -170px;
+  }
+
+  .ladi-footer-phone{
+    
+    padding-left: 60px;
+  }
+  .ladi-footer-follow{
+    padding-left: 100px;
+  }
+
+  .ladi-inves-paragraph{
+    font-size: 12px;
+  }
+
+  .ladi-footer-wrap{
+    padding-left: 0;
+  }
+  .ladi-footer-contact-col{
+    margin-right: 0px;
+  }
+  }
+  @include tablet(){  
+    padding: 0;
+    max-width: 100%;
+    .ladi-header-wrap{
+      padding: 0 -40px !important;
+    }
+
+    .ladi-description {
+      padding: 0 40px;
+    }
+    .ladi-introduce-row{
+      box-sizing: border-box;
+      padding: 40px 40px;
+    }
+
+    .ladi-port-cap{
+      padding: 0 40px 40px;
+    }
+
+    .ladi-inves-wrap{
+      padding: 30px 40px;
+
+    }
+
+    .ladi-inves {
+      height: 530.9px;
+  }
+
+    .ladi-inves-silde{
+      height: 270px;
+      // width: 55%;
+    }
+    .ladi-inves-group {
+      height: 300px;
+  }
+    .ladi-inves-img{
+      &__bg{
+        height: 92%;
+        width: 300px;
+      }
+    }
+    .ladi-inves-boxline{
+      width: 200.366px;
+      height: 96.8%;
+  }   
+  .ladi-inves-boxwhite{
+    width: 200.987px;
+    height: 100%;
+    background-color: #fff;
+}
+    
+    .btn-language{
+      display: none;
+    }
+    .ladi-nav{
+      &__intro{
+        padding:0;
+      }
+    }
+    .ladi-service-wrap{
+      padding-bottom: 0;
+    }
+
+    .ladi-service-group{
+      &__block{
+          left: 230%;
+      }
+
+      &__icon{
+
+          left: 260%;
+      }
+    }
+    .ladi-service-content{
+      &__img{
+          height: 250px;
+      }
+    }
+    .ladi-service-headerline{
+      h6 {
+        margin-top: 40px;
+    }}
+    .ladi-service-textline{
+        height: 140px;
+    }
+
+    .ladi-port {
+        height: 500px;
+    }
+
+    .ladi-inves-boxslide {
+      top: 133px;
+      left: 217px;
+      height: 161.872px;
+      width: 186.245px;
+  }
+  .ladi-inves-imgside {
+    top: 5px;
+  }
+  .ladi-port-cap-img{
+    height: 200px;
+  }
+  .ladi-port-cap-des{
+    &__content{
+      height: 140px;
+    }
+    
+  }
+
+  .ladi-support-group {
+    height: 336.3px;
+  }
+
+  .ladi-support-calculator__bgimg {
+    width: 90%;
+    height: 77%;
+  }
+
+  .ladi-support-block__rectangle {
+    width: 120.648px;
+  }
+
+  .ladi-support-block__circle {
+    margin-left: -170px;
+  }
+
+  .ladi-footer-phone{
+    
+    padding-left: 60px;
+  }
+  .ladi-footer-follow{
+    padding-left: 100px;
+  }
+
+  .ladi-inves-paragraph{
+    font-size: 12px;
+  }
+
+  .ladi-footer-wrap{
+    padding: 40px;
+  }
+  .ladi-footer-contact-col{
+    margin-right: 0px;
+  }
+  }
+
+  @include tablet1(){  
+    padding: 0;
+    max-width: 100%;
+    .ladi-header-wrap{
+      padding: 0 -40px !important;
+    }
+
+    .ladi-description {
+      padding: 0 40px;
+    }
+    .ladi-introduce-row{
+      box-sizing: border-box;
+      padding: 40px 40px;
+    }
+
+    .ladi-port-cap{
+      padding: 0 40px 40px;
+    }
+
+    .ladi-inves-wrap{
+      padding: 30px 40px;
+
+    }
+
+    .ladi-inves {
+      height: 530.9px;
+  }
+
+    .ladi-inves-silde{
+      height: 270px;
+      // width: 55%;
+    }
+    .ladi-inves-group {
+      height: 300px;
+  }
+    .ladi-inves-img{
+      &__bg{
+        height: 92%;
+        width: 300px;
+      }
+    }
+    .ladi-inves-boxline{
+      width: 200.366px;
+      height: 96.8%;
+  }   
+  .ladi-inves-boxwhite{
+    width: 200.987px;
+    height: 100%;
+    background-color: #fff;
+}
+    
+    .btn-language{
+      display: none;
+    }
+    .ladi-nav{
+      &__intro{
+        padding:0;
+      }
+    }
+    .ladi-service-wrap{
+      padding-bottom: 0;
+    }
+
+    .ladi-service-group{
+      &__block{
+          left: 230%;
+      }
+
+      &__icon{
+
+          left: 260%;
+      }
+    }
+    .ladi-service-content{
+      &__img{
+          height: 250px;
+      }
+    }
+    .ladi-service-headerline{
+      h6 {
+        margin-top: 40px;
+    }}
+    .ladi-service-textline{
+        height: 140px;
+    }
+
+    .ladi-port {
+        height: 500px;
+    }
+
+    .ladi-inves-boxslide {
+      top: 133px;
+      left: 217px;
+      height: 161.872px;
+      width: 186.245px;
+  }
+  .ladi-inves-imgside {
+    top: 5px;
+  }
+  .ladi-port-cap-img{
+    height: 200px;
+  }
+  .ladi-port-cap-des{
+    h6{
+      font-size: 14px;
+    }
+    &__content{
+      height: 140px;
+    }
+    
+  }
+
+  .ladi-support-group {
+    height: 336.3px;
+  }
+
+  .ladi-support-calculator__bgimg {
+    width: 90%;
+    height: 77%;
+  }
+
+  .ladi-support-block__rectangle {
+    width: 120.648px;
+  }
+
+  .ladi-support-block__circle {
+    margin-left: -170px;
+  }
+
+  .ladi-footer-phone{
+    
+    padding-left: 60px;
+  }
+  .ladi-footer-follow{
+    padding-left: 80px;
+  }
+
+  .ladi-inves-paragraph{
+    font-size: 12px;
+    margin-bottom: 5px;
+  }
+
+  .ladi-footer-wrap{
+    padding: 40px;
+  }
+  .ladi-footer-contact-col{
+    margin-right: 0px;
+  }
+  }
+  @include tablet2(){  
+    padding: 0;
+    max-width: 100%;
+
+    .ladi-header{
+      height: 100px;
+    }
+
+    .ladi-logo__img {
+      height: 62px;
+    }
+
+    .ladi-description {
+      padding: 0 40px;
+    }
+    .ladi-introduce-row{
+      box-sizing: border-box;
+      padding: 40px 40px;
+    }
+    .ladi-introduce-list {
+      margin-left: 40px;
+    }  
+    .ladi-introduce-content{
+      p{
+        font-size: 14px;
+      }
+    }
+    
+    
+    .ladi-img3-introduce {
+        height: 226px;
+    }
+
+    .ladi-inves-wrap{
+      padding: 30px 40px;
+      display: block;
+
+    }
+
+    .ladi-inves {
+      height: 530.9px;
+  }
+  .ladi-inves-content{
+    width: 100%;
+    &__title {
+      width: 100%;
+    }
+  }
+
+    .ladi-inves-silde{
+      height: 245px;
+      top: 0;
+      padding-bottom: 10px;
+      align-content: center;
+    }
+  
+    .ladi-inves-group {
+      // height: 300px;
+      padding-bottom: 10px;
+  }
+    .ladi-inves-img{
+      height: 97%;
+      &__bg{
+        height: 92%;
+        width: 300px;
+      }
+    }
+    .ladi-inves-boxline{
+      width: 183.366px;
+      height: 96.8%;
+  }   
+  .ladi-inves-boxwhite{
+    width: 200.987px;
+    height: 100%;
+    background-color: #fff;
+  }
+  .ladi-inves-boxslide {
+    top: 128px;
+    left: 144px;
+    height: 143.872px;
+    width: 171.245px;
+  }
+  .ladi-inves-imgside {
+  top: 5px;
+  }
+  .ladi-inves-line {
+      height: 52px;
+  }
+  .ladi-inves-shape {
+    margin-bottom: 35px;
+}
+  .ladi-inves-paragraph{
+    font-size: 11px;
+    margin-bottom: 5px;
+    width: 90%;
+  }
+    
+    .btn-language{
+      display: none;
+    }
+    .ladi-nav{
+      &__intro{
+        padding:0;
+      }
+    }
+    .ladi-service-wrap{
+      padding-bottom: 0;
+    }
+
+    .ladi-service-des {
+      p{
+        font-size: 14px;
+      }
+    }
+
+    .ladi-service-group{
+      &__block{
+          left: 230%;
+      }
+
+      &__icon{
+
+          left: 260%;
+      }
+    }
+
+    .ladi-service-list{
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+    }
+    .ladi-service-col{
+      width: 45px;
+      margin-left: 20px;
+      // justify-content: flex-start;
+    }
+    .ladi-service-content{
+      &__img{
+          height: 250px;
+      }
+    }
+    .ladi-service-headerline{
+      h6 {
+        margin-top: 40px;
+    }}
+    .ladi-service-textline{
+        height: 125px;
+    }
+
+    .ladi-port {
+        height: 500px;
+    }
+    .ladi-port-cap{
+      padding: 0 40px 0;
+    }
+    
+  .ladi-port-cap-img{
+    height: 165px;
+  }
+  .ladi-port-cap-content{
+    flex-wrap: wrap;
+  }
+  .ladi-port-cap-elememt{
+    width: 43%;
+  }
+  .ladi-port-cap-des{
+    h6{
+      font-size: 14px;
+    }
+    &__content{
+      height: 120px;
+    }
+    
+  }
+
+  .ladi-port-line{
+    margin-bottom: 10px;
+  }
+
+  .ladi-support-group {
+    height: 336.3px;
+  }
+
+  .ladi-support-calculator__bgimg {
+    width: 90%;
+    height: 77%;
+  }
+
+  .ladi-support-block__rectangle {
+    width: 120.648px;
+    h3{
+      font-size: 16px;
+    }
+  }
+
+  .ladi-support-block__circle {
+    margin-left: -150px;
+  }
+
+  .ladi-footer-phone{
+    
+    padding-left: 10px;
+  }
+  .ladi-footer-email{
+    
+    padding-left: 10px;
+  }
+  .ladi-footer-follow{
+    padding-left: 20px;
+  }
+
+  
+
+  .ladi-footer-wrap{
+    padding: 40px 40px 0;
+  }
+  .ladi-footer-contact-col{
+    margin-right: 0px;
+  }
+  }
+  @include tablet3(){  
+    padding: 0;
+    max-width: 100%;
+
+    .ladi-header{
+      height: 100px;
+    }
+    .ladi-nav{
+      display: none;
+      &__intro{
+        padding:0;
+      }
+    }
+    .ladi-header-menu{
+      
+      display: block;
+    }
+
+    .ladi-description {
+      padding: 0 40px;
+    }
+    .ladi-introduce-row{
+      box-sizing: border-box;
+      padding: 40px 40px;
+      display: block;
+    }
+    .ladi-introduce-col{
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .ladi-introduce-list {
+      margin-left: 40px;
+    }  
+    .ladi-introduce-content{
+      p{
+        font-size: 14px;
+      }
+    }
+    
+    
+    .ladi-img3-introduce {
+        height: 277px;
+        width: 100%;
+    }
+    .ladi-row{
+      width: 100%;
+      .ladi-col{
+        width: 50%;
+      }
+    }
+    
+
+    .ladi-inves-wrap{
+      padding: 30px 40px;
+      display: block;
+
+    }
+
+    .ladi-inves {
+      height: 530.9px;
+  }
+  .ladi-inves-content{
+    width: 100%;
+    &__title {
+      width: 100%;
+    }
+  }
+
+    .ladi-inves-silde{
+      width: 100%;
+      height: 245px;
+      top: 0;
+      padding-bottom: 10px;
+      align-content: center;
+    }
+  
+    .ladi-inves-group {
+      // height: 300px;
+      padding-bottom: 10px;
+  }
+    .ladi-inves-img{
+      height: 97%;
+      width: 68%;
+      &__bg{
+        height: 92%;
+        width: 300px;
+      }
+    }
+    .ladi-inves-boxline{
+      width: 183.366px;
+      height: 96.8%;
+  }   
+  .ladi-inves-boxwhite{
+    width: 200.987px;
+    height: 100%;
+    background-color: #fff;
+  }
+  .ladi-inves-boxslide {
+    top: 128px;
+    left: 210px;
+    height: 143.872px;
+    width: 171.245px;
+  }
+  .ladi-inves-imgside {
+  top: 5px;
+  }
+  .ladi-inves-line {
+      height: 52px;
+  }
+  .ladi-inves-shape {
+    margin-bottom: 35px;
+}
+  .ladi-inves-paragraph{
+    font-size: 11px;
+    margin-bottom: 5px;
+    width: 95%;
+  }
+    
+    .btn-language{
+      display: none;
+    }
+    
+    .ladi-item-warp {
+      width: 150px;
+  }
+
+  .ladi-item-tiltle {
+    h3 {
+    font-size: 13px;
+  }
+  }
+
+  
+    
+    .ladi-service-wrap{
+      padding-bottom: 0;
+    }
+
+    .ladi-service-des {
+      p{
+        font-size: 14px;
+      }
+    }
+
+    .ladi-service-group{
+      &__block{
+          left: 620%;
+      }
+
+      &__icon{
+
+          left: 650%;
+      }
+    }
+
+    .ladi-service-list{
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+    }
+    .ladi-service-col{
+      width: 45px;
+      margin-left: 20px;
+      // justify-content: flex-start;
+    }
+    .ladi-service-content{
+      &__img{
+          height: 250px;
+      }
+    }
+    .ladi-service-headerline{
+      h6 {
+        margin-top: 20px;
+    }}
+    .ladi-service-textline{
+        height: 85px;
+    }
+
+    .ladi-port {
+        height: 500px;
+    }
+    .ladi-port-cap{
+      padding: 0 40px 0;
+      display: block;
+    }
+    .ladi-port-cap-header{
+      width: 100%;
+      margin-top: 30px;
+    }
+  .ladi-port-cap-img{
+    height: 165px;
+  }
+  .ladi-port-cap-content{
+    flex-wrap: wrap;
+    margin-top: 0;
+    width: 100%;
+  }
+  .ladi-port-cap-elememt{
+    width: 43%;
+  }
+  .ladi-port-cap-des{
+    h6{
+      font-size: 14px;
+    }
+    &__content{
+      height: 120px;
+    }
+    
+  }
+
+  .ladi-port-line{
+    margin-bottom: 10px;
+  }
+
+  .ladi-support-group {
+    height: 336.3px;
+    display: block;
+  }
+  .ladi-support-option{
+    display: flex;
+      width: 17%;
+  }
+
+  .ladi-support-block{
+    margin-top: 10px;
+  }
+  .ladi-support-calculator{
+    width: 90%;
+    height: 85%;
+    margin-left: 30px;
+  }
+  .ladi-support-calculator__bgimg {
+    width: 90%;
+    height: 77%;
+  }
+
+  .ladi-support-block__rectangle {
+    width: 190px;
+    h3{
+      padding: 11px 0 0 20px;
+      font-size: 12px;
+    }
+  }
+
+  .ladi-support-block__circle {
+    margin-left: -132px;
+  }
+  .ladi-partner-group{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .ladi-partner-group-row{
+    flex-wrap: wrap;
+  }
+  .ladi-partner-group-logo{
+    // width: 20%;
+
+    &__img{
+      // width: 30%;   
+    }
+  }
+
+  .ladi-footer-connect{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .ladi-footer-phone{
+    width: auto;
+    padding-left: 0;
+  }
+  .ladi-footer-email{
+    width: auto;
+    padding-left: 15px;
+  }
+  .ladi-footer-follow{
+    width: auto;
+    margin-top: 10px;
+    padding-left: 0px;
+  }
+
+  
+
+  .ladi-footer-wrap{
+    padding: 40px 40px 0;
+    
+  }
+  .ladi-footer-contact-col{
+    margin-right: 0px;
+  }
+  }
+  .ladi-fotter-headline{
+    margin-top: 30px;
+  }
+  
+//   @include mobile{
+//     height: 100%;
+//     padding: 0 40px;
+//     position: relative;
+//   }
+}
+
+@include desktop{
+  .ladi-header-container{
+    padding: 0 100px !important;
+  }
+}
+@include desktop1{
+  .ladi-header-container{
+    padding: 0 80px !important;
+  }
+}
+@include desktop2{
+  .ladi-header-container{
+    padding: 0 80px !important;
+  }
+}
+@include desktop3{
+  .ladi-header-container{
+    padding: 0 80px !important;
+  }
+}
+@include desktop4{
+  .ladi-header-container{
+    padding: 0 40px !important;
+  }
+}
+@include tablet(){
+  .ladi-header-container{
+    padding: 0 !important;
+  }
+}
+
+@include tablet2(){
+  .ladi-header{
+    height: 100px !important;
+  }
+  .ladi-service-col {
+    width: 45% !important;
+  }
+  .ladi-popup-container {
+    width: 580px !important;
+  }
+  .ladi-popup-img__bg {
+    width: 258px !important;
+  }
+
+}
+
+@include tablet3(){
+  // .ladi-header{
+  //   height: 100px !important;
+  // }
+  .ladi-service-col {
+    width: 100% !important;
+  }
+  .ladi-popup-container {
+    width: 475px !important;
+  }
+  .ladi-popup-img__bg {
+    height: 293px !important;
+    top: 84 !important;
+    width: 200px !important;
+  }
+  .ladi-popup-content{
+    p{
+      font-size: 12px !important;
+    }
+  }
+  .ladi-video {
+    height: 335px !important;
+}
+.ladi-partner{
+  height: auto !important;
+}
+.ladi-background-img {
+  background-position: center !important; 
+}
+
+}
+.active{
+  display: block;
 }
