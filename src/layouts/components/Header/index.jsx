@@ -12,7 +12,10 @@ function Header(props) {
   const [menu, setMenu] = useState(false)
 
   function hanleOnClickMenu(){
-    setMenu(true)
+    setMenu(!menu)
+  }
+  function hanleOutMenu(){
+    setMenu(false)
   }
 
   function handleClickModal() {
@@ -23,7 +26,7 @@ function Header(props) {
   }
   return (
     <>
-      <div className="ladi-header">
+      <div className="ladi-header" onWheel={hanleOutMenu}>
         <div className="container">
           <div className="ladi-header-wrap">
             <div className="ladi-logo">
@@ -35,24 +38,25 @@ function Header(props) {
             <div className="ladi-header-menu" onClick={hanleOnClickMenu}>
               <ion-icon name="menu-outline"></ion-icon>
             </div>
-            <div className="ladi-nav" style={{display: menu && 'block'}}>
-              <ul>
+            <div className="ladi-nav"  style={{display: menu && 'block'}}>
+              <div className="ladi-nav__click" onClick={hanleOutMenu}></div>
+              <ul className="ladi-nav__ul">
                 <li className="ladi-nav__intro">
                   <BtnLadiNav title={"GIỚI THIỆU"} link={"#introduce"} />
                   <ul className="modal-service">
-                    <li>
+                    <li className="modal-li">
                       <a href="#">GIỚI THIỆU CẢNG</a>
                     </li>
-                    <li>
+                    <li  className="modal-li">
                       <a href="#">NĂNG LỰC CẢNG</a>
                       <ul className="modal-service1">
-                        <li>
+                        <li className="modal-li1">
                           <a href="#">BẾN CẢNG</a>
                         </li>
-                        <li>
+                        <li className="modal-li1">
                           <a href="#">HỆ THỐNG KHO BÃI</a>
                         </li>
-                        <li>
+                        <li className="modal-li1">
                           <a href="#">NĂNG LỰC CẢNG</a>
                         </li>
                       </ul>
@@ -62,13 +66,13 @@ function Header(props) {
                 <li className="ladi-nav__intro">
                   <BtnLadiNav title={"DỊCH VỤ"} link={"#service"} />
                   <ul className="modal-service">
-                    <li>
+                    <li className="modal-li">
                       <a href="#">DỊCH VỤ CẢNG BIỂN</a>
                     </li>
-                    <li>
+                    <li className="modal-li">
                       <a href="#">LƯU TRỮ HÀNG HÓA</a>
                     </li>
-                    <li>
+                    <li className="modal-li">
                       <a href="#">VẬN TẢI HÀNG HÓA</a>
                     </li>
                   </ul>
@@ -76,13 +80,13 @@ function Header(props) {
                 <li className="ladi-nav__intro">
                   <BtnLadiNav title={"HỔ TRỢ"} link={"#support"} />
                   <ul className="modal-service">
-                    <li>
+                    <li className="modal-li">
                       <a href="#">LỊCH TÀU</a>
-                    </li>
-                    <li>
+                    </li >
+                    <li className="modal-li">
                       <a href="#">THÔNG BÁO</a>
                     </li>
-                    <li>
+                    <li className="modal-li">
                       <a href="#">BIỂU CƯỚC</a>
                     </li>
                   </ul>

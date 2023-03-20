@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Header from "../components/Header";
 import Silde from "../components/Silde";
@@ -17,9 +17,8 @@ HomePage.propTypes = {};
 
 function HomePage(props) {
   return (
-    <>
+    <React.Fragment >
       <Header />
-      {/* <div style={{width: '100%', height: '200px'}}></div> */}
       <Silde />
       <div id="introduce">
       <FactItem />
@@ -39,7 +38,7 @@ function HomePage(props) {
       <Partner/>
       </div>
       <Footer/>
-      </>
+      </React.Fragment>
   );
 }
 

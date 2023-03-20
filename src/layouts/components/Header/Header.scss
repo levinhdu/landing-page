@@ -11,12 +11,12 @@ $desktop-width: 1430px;
 
 .ladi-header-menu{
     display: none;
+    right: 0;
+    position: absolute; 
     ion-icon{
         height: 77px;
         line-height: 77px;
         width: 55px;
-        padding: 0 20px;
-        margin-left: 100px;
     }
 }
 .ladi-header-wrap{
@@ -119,15 +119,15 @@ $desktop-width: 1430px;
     z-index: 1;
     background-color: #fff;
 
-    li:hover{
+    .modal-li:hover{
         background-color: rgba(125 , 125, 125,0.1);
         border-radius: 5px;
 
     }
-    li:hover .modal-service1{
+    .modal-li:hover .modal-service1{
         display: block;
     }
-    li{
+    .modal-li{
         list-style-type: none;
         cursor: pointer;
         width: 180px;
@@ -158,12 +158,12 @@ $desktop-width: 1430px;
     z-index: 1;
     background-color: #fff;
 
-    li:hover{
+    .modal-li1:hover{
         background-color: rgba(125 , 125, 125,0.1);
         border-radius: 5px;
 
     }
-    li{
+    .modal-li1{
         list-style-type: none;
         cursor: pointer;
         width: 180px;

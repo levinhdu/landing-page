@@ -2,7 +2,8 @@ $tablet-width : 880px;
 $tablet1-width : 800px;
 $tablet2-width : 740px;
 $tablet3-width : 600px;
-$tablet4-width : 500px;
+$tablet4-width : 560px;
+$tablet5-width : 500px;
 
 $desktop-width: 1430px;
 $desktop1-width: 1310px;
@@ -10,10 +11,17 @@ $desktop2-width: 1170px;
 $desktop3-width: 1080px;
 $desktop4-width: 950px;
 
-// @mixin mobile { @media (max-width: #{$tablet-width}) {     
-//   @content;   
-//  } 
-// }  
+$mobile-width: 365px;
+
+
+@mixin mobile { @media (min-width: #{$mobile-width}) and (max-width: #{$tablet5-width}) {     
+  @content;   
+ } 
+}  
+@mixin mobile1 { @media (max-width: #{$mobile-width}) {     
+  @content;   
+ } 
+}  
 
 
 
@@ -45,7 +53,7 @@ $desktop4-width: 950px;
 } 
 }  
 
-@mixin tablet1 { @media (min-width: #{$tablet2-width}) and (max-width: #{$tablet1-width}) {     
+@mixin tablet1 { @media (min-width: #{$tablet2-width + 1}) and (max-width: #{$tablet1-width}) {     
   @content;  
  } 
 }
@@ -54,6 +62,11 @@ $desktop4-width: 950px;
  } 
 }
 @mixin tablet3 { @media (min-width: #{$tablet4-width}) and (max-width: #{$tablet3-width}) {     
+  @content;  
+ } 
+}
+
+@mixin tablet4 { @media (min-width: #{$tablet5-width}) and (max-width: #{$tablet4-width}) {     
   @content;  
  } 
 }
@@ -606,13 +619,82 @@ $desktop4-width: 950px;
   @include tablet2(){  
     padding: 0;
     max-width: 100%;
+    .ladi-nav{
+      display: none;
+      position: absolute;
+      top: 77px;
+      right: 0;
+      margin: 0;
 
-    .ladi-header{
-      height: 100px;
+      width: 100%;
+      height: 100vh;
+
+      background: rgba($color: #ccc, $alpha: 0.3);
+
+      z-index: 1;
+      &__click{
+        position: absolute;
+        width: 50%;
+        height: 100%;
+      }
+      &__ul{
+        position: absolute;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background-color: #fff;
+      }
+      &__intro{
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 10px 20px;
+        z-index: 1;
+        font-size: 18px;
+        border-bottom: 1px solid #ccc;
+      }
+      &__intro::after{
+          display: none ;
+      }
+    }
+
+    .modal-service{
+      position: static;
+      width: 100%;
+      .modal-li{
+        height: auto;
+        display: block;
+        width: 100%;
+        font-size: 18px;
+
+        a{
+          height: 40px;
+          line-height: 40px;
+        }
+      }
+    }
+
+    .modal-service1{
+      position: static;
+      width: 100%;
+      .modal-li1{
+        width: 100%;
+      }
+      
+    }
+    .ladi-btn-nav{
+      justify-content: flex-start;
+    }
+    .ladi-header-wrap{
+      position: static;
+    }
+    .ladi-header-menu{  
+      display: block;
     }
 
     .ladi-logo__img {
-      height: 62px;
+      height: 50px;
     }
 
     .ladi-description {
@@ -667,7 +749,7 @@ $desktop4-width: 950px;
       height: 97%;
       &__bg{
         height: 92%;
-        width: 300px;
+        width: 285px;
       }
     }
     .ladi-inves-boxline{
@@ -680,13 +762,14 @@ $desktop4-width: 950px;
     background-color: #fff;
   }
   .ladi-inves-boxslide {
-    top: 128px;
-    left: 144px;
+    top: 125px;
+    left: 210px;
     height: 143.872px;
     width: 171.245px;
   }
   .ladi-inves-imgside {
-  top: 5px;
+    top: 5px;
+    left: 5px;
   }
   .ladi-inves-line {
       height: 52px;
@@ -695,18 +778,13 @@ $desktop4-width: 950px;
     margin-bottom: 35px;
 }
   .ladi-inves-paragraph{
-    font-size: 11px;
+    font-size: 12px;
     margin-bottom: 5px;
     width: 90%;
   }
     
     .btn-language{
       display: none;
-    }
-    .ladi-nav{
-      &__intro{
-        padding:0;
-      }
     }
     .ladi-service-wrap{
       padding-bottom: 0;
@@ -799,7 +877,7 @@ $desktop4-width: 950px;
   }
 
   .ladi-support-block__circle {
-    margin-left: -150px;
+    margin-left: -167px;
   }
 
   .ladi-footer-phone{
@@ -826,18 +904,77 @@ $desktop4-width: 950px;
   @include tablet3(){  
     padding: 0;
     max-width: 100%;
-
-    .ladi-header{
-      height: 100px;
-    }
     .ladi-nav{
       display: none;
+      position: absolute;
+      top: 77px;
+      right: 0;
+      margin: 0;
+
+      width: 100%;
+      height: 100vh;
+
+      background: rgba($color: #ccc, $alpha: 0.3);
+
+      z-index: 1;
+      &__click{
+        position: absolute;
+        width: 50%;
+        height: 100%;
+      }
+      &__ul{
+        position: absolute;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background-color: #fff;
+      }
       &__intro{
-        padding:0;
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 10px 20px;
+        z-index: 1;
+        font-size: 18px;
+        border-bottom: 1px solid #ccc;
+      }
+      &__intro::after{
+          display: none ;
       }
     }
-    .ladi-header-menu{
+
+    .modal-service{
+      position: static;
+      width: 100%;
+      .modal-li{
+        height: auto;
+        display: block;
+        width: 100%;
+        font-size: 18px;
+
+        a{
+          height: 40px;
+          line-height: 40px;
+        }
+      }
+    }
+
+    .modal-service1{
+      position: static;
+      width: 100%;
+      .modal-li1{
+        width: 100%;
+      }
       
+    }
+    .ladi-btn-nav{
+      justify-content: flex-start;
+    }
+    .ladi-header-wrap{
+      position: static;
+    }
+    .ladi-header-menu{  
       display: block;
     }
 
@@ -908,7 +1045,7 @@ $desktop4-width: 950px;
       width: 68%;
       &__bg{
         height: 92%;
-        width: 300px;
+        width: 285px;
       }
     }
     .ladi-inves-boxline{
@@ -928,6 +1065,365 @@ $desktop4-width: 950px;
   }
   .ladi-inves-imgside {
   top: 5px;
+  left: 5px;
+  }
+  .ladi-inves-line {
+      height: 52px;
+  }
+  .ladi-inves-shape {
+    margin-bottom: 35px;
+}
+  .ladi-inves-paragraph{
+    font-size: 11px;
+    margin-bottom: 5px;
+    width: 95%;
+  }
+    
+    .btn-language{
+      display: none;
+    }
+    
+    .ladi-item-warp {
+      width: 150px;
+  }
+
+  .ladi-item-tiltle {
+    h3 {
+    font-size: 13px;
+  }
+  }
+
+  
+    
+    .ladi-service-wrap{
+      padding-bottom: 0;
+    }
+
+    .ladi-service-des {
+      p{
+        font-size: 14px;
+      }
+    }
+
+    .ladi-service-group{
+      &__block{
+          left: 620%;
+      }
+
+      &__icon{
+
+          left: 650%;
+      }
+    }
+
+    .ladi-service-list{
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+    }
+    .ladi-service-col{
+      width: 45px;
+      margin-left: 20px;
+      // justify-content: flex-start;
+    }
+    .ladi-service-content{
+      &__img{
+          height: 250px;
+      }
+    }
+    .ladi-service-headerline{
+      h6 {
+        margin-top: 20px;
+    }}
+    .ladi-service-textline{
+        height: 85px;
+    }
+
+    .ladi-port {
+        height: 500px;
+    }
+    .ladi-port-cap{
+      padding: 0 40px 0;
+      display: block;
+    }
+    .ladi-port-cap-header{
+      width: 100%;
+      margin-top: 30px;
+    }
+  .ladi-port-cap-img{
+    height: 165px;
+  }
+  .ladi-port-cap-content{
+    flex-wrap: wrap;
+    margin-top: 0;
+    width: 100%;
+  }
+  .ladi-port-cap-elememt{
+    width: 43%;
+  }
+  .ladi-port-cap-des{
+    h6{
+      font-size: 14px;
+    }
+    &__content{
+      height: 120px;
+    }
+    
+  }
+
+  .ladi-port-line{
+    margin-bottom: 10px;
+  }
+
+  .ladi-support-group {
+    height: 336.3px;
+    display: block;
+  }
+  .ladi-support-option{
+    display: flex;
+      width: 17%;
+  }
+
+  .ladi-support-block{
+    margin-top: 10px;
+  }
+  .ladi-support-calculator{
+    width: 90%;
+    height: 85%;
+    margin-left: 30px;
+  }
+  .ladi-support-calculator__bgimg {
+    width: 90%;
+    height: 77%;
+  }
+
+  .ladi-support-block__rectangle {
+    width: 190px;
+    h3{
+      padding: 11px 0 0 26px;
+      font-size: 12px;
+    }
+  }
+
+  .ladi-support-block__circle {
+    margin-left: -135px;
+  }
+  .ladi-partner-group{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .ladi-partner-group-row{
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .ladi-partner-group-logo{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+
+    &__img1{
+      margin: 0;
+     }
+
+    &__img7{
+     margin: 0;
+    }
+  }
+
+  .ladi-footer-connect{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .ladi-footer-phone{
+    width: 40%;
+    padding-left: 0;
+  }
+  .ladi-footer-email{
+    width: 40%;
+    // padding-left: 15px;
+  }
+  .ladi-footer-follow{
+    width: auto;
+    margin-top: 10px;
+    padding-left: 0px;
+  }
+
+  
+
+  .ladi-footer-wrap{
+    padding: 40px 40px 0;
+    
+  }
+  .ladi-footer-contact-col{
+    margin-right: 0px;
+  }
+  }
+  @include tablet4(){  
+    padding: 0;
+    max-width: 100%;
+    .ladi-nav{
+      display: none;
+      position: absolute;
+      top: 77px;
+      right: 0;
+      margin: 0;
+
+      width: 100%;
+      height: 100vh;
+
+      background: rgba($color: #ccc, $alpha: 0.3);
+      z-index: 1;
+      &__intro{
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 10px 20px;
+        z-index: 1;
+        font-size: 18px;
+        border-bottom: 1px solid #ccc;
+      }
+      &__intro::after{
+          display: none ;
+      }
+      &__click{
+        position: absolute;
+        width: 50%;
+        height: 100%;
+      }
+      &__ul{
+        position: absolute;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background-color: #fff;
+      }
+    }
+
+    .modal-service{
+      position: static;
+      width: 100%;
+      .modal-li{
+        height: auto;
+        display: block;
+        width: 100%;
+        font-size: 18px;
+
+        a{
+          height: 40px;
+          line-height: 40px;
+        }
+      }
+    }
+
+    .modal-service1{
+      position: static;
+      width: 100%;
+      .modal-li1{
+        width: 100%;
+      }
+      
+    }
+    .ladi-btn-nav{
+      justify-content: flex-start;
+    }
+    .ladi-header-wrap{
+      position: static;
+    }
+    .ladi-header-menu{  
+      display: block;
+    }
+
+    .ladi-description {
+      padding: 0 40px;
+    }
+    .ladi-introduce-row{
+      box-sizing: border-box;
+      padding: 40px 40px;
+      display: block;
+    }
+    .ladi-introduce-col{
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .ladi-introduce-list {
+      margin-left: 40px;
+    }  
+    .ladi-introduce-content{
+      p{
+        font-size: 14px;
+      }
+    }
+    
+    
+    .ladi-img3-introduce {
+        height: 277px;
+        width: 100%;
+    }
+    .ladi-row{
+      width: 100%;
+      .ladi-col{
+        width: 50%;
+      }
+    }
+    
+
+    .ladi-inves-wrap{
+      padding: 30px 40px;
+      display: block;
+
+    }
+
+    .ladi-inves {
+      height: 530.9px;
+  }
+  .ladi-inves-content{
+    width: 100%;
+    &__title {
+      width: 100%;
+    }
+  }
+
+    .ladi-inves-silde{
+      width: 100%;
+      height: 245px;
+      top: 0;
+      padding-bottom: 10px;
+      align-content: center;
+    }
+  
+    .ladi-inves-group {
+      // height: 300px;
+      padding-bottom: 10px;
+  }
+    .ladi-inves-img{
+      height: 97%;
+      width: 68%;
+      &__bg{
+        height: 92%;
+        width: 285px;
+      }
+    }
+    .ladi-inves-boxline{
+      width: 183.366px;
+      height: 96.8%;
+  }   
+  .ladi-inves-boxwhite{
+    width: 200.987px;
+    height: 100%;
+    background-color: #fff;
+  }
+  .ladi-inves-boxslide {
+    top: 128px;
+    left: 210px;
+    height: 143.872px;
+    width: 171.245px;
+  }
+  .ladi-inves-imgside {
+  top: 5px;
+  left: 5px;
   }
   .ladi-inves-line {
       height: 52px;
@@ -1068,7 +1564,7 @@ $desktop4-width: 950px;
   }
 
   .ladi-support-block__circle {
-    margin-left: -132px;
+    margin-left: -135px;
   }
   .ladi-partner-group{
     height: auto;
@@ -1077,12 +1573,20 @@ $desktop4-width: 950px;
   }
   .ladi-partner-group-row{
     flex-wrap: wrap;
+    width: 100%;
   }
   .ladi-partner-group-logo{
-    // width: 20%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
 
-    &__img{
-      // width: 30%;   
+    &__img1{
+      margin: 0;
+     }
+
+    &__img7{
+     margin: 0;
     }
   }
 
@@ -1091,12 +1595,781 @@ $desktop4-width: 950px;
     justify-content: center;
   }
   .ladi-footer-phone{
-    width: auto;
+    width: 40%;
     padding-left: 0;
   }
   .ladi-footer-email{
+    width: 40%;
+    // padding-left: 15px;
+  }
+  .ladi-footer-follow{
     width: auto;
-    padding-left: 15px;
+    margin-top: 10px;
+    padding-left: 0px;
+  }
+
+  
+
+  .ladi-footer-wrap{
+    padding: 40px 40px 0;
+    
+  }
+  .ladi-footer-contact-col{
+    margin-right: 0px;
+  }
+  }
+  @include mobile(){  
+    padding: 0;
+    max-width: 100%;
+    .ladi-nav{
+      display: none;
+      position: absolute;
+      top: 77px;
+      right: 0;
+      margin: 0;
+
+      width: 100%;
+      height: 100vh;
+
+      background: rgba($color: #ccc, $alpha: 0.3);
+      z-index: 1;
+      &__click{
+        position: absolute;
+        width: 50%;
+        height: 100%;
+      }
+      &__ul{
+        position: absolute;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background-color: #fff;
+      }
+      &__intro{
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 10px 20px;
+        z-index: 1;
+        font-size: 18px;
+        border-bottom: 1px solid #ccc;
+      }
+      &__intro::after{
+          display: none ;
+      }
+    }
+
+    .modal-service{
+      position: static;
+      width: 100%;
+      .modal-li{
+        height: auto;
+        display: block;
+        width: 100%;
+        font-size: 18px;
+
+        a{
+          height: 40px;
+          line-height: 40px;
+        }
+      }
+    }
+
+    .modal-service1{
+      position: static;
+      width: 100%;
+      .modal-li1{
+        width: 100%;
+      }
+      
+    }
+    .ladi-btn-nav{
+      justify-content: flex-start;
+    }
+    .ladi-header-wrap{
+      position: static;
+    }
+    .ladi-header-menu{  
+      display: block;
+    }
+
+    .ladi-description {
+      padding: 0 40px;
+
+      &__header{
+        h1{
+          font-size: 25px;
+        }
+      }
+      &__content{
+        width: auto;
+        top: 70px;
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+
+
+    .ladi-introduce-row{
+      box-sizing: border-box;
+      padding: 40px 40px;
+      display: block;
+    }
+    .ladi-introduce-col{
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .ladi-introduce-list {
+      margin-left: 40px;
+    }  
+    .ladi-introduce-content{
+      p{
+        font-size: 14px;
+      }
+    }
+    
+    
+    .ladi-img3-introduce {
+        height: 277px;
+        width: 100%;
+    }
+    .ladi-row{
+      width: 100%;
+      .ladi-col{
+        width: 50%;
+      }
+    }
+    
+
+    .ladi-inves-wrap{
+      padding: 30px 40px;
+      display: block;
+
+    }
+
+    .ladi-inves {
+      height: 530.9px;
+  }
+  .ladi-inves-content{
+    width: 100%;
+    &__title {
+      width: 100%;
+    }
+  }
+
+    .ladi-inves-silde{
+      width: 100%;
+      height: 245px;
+      top: 0;
+      padding-bottom: 10px;
+      align-content: center;
+    }
+  
+    .ladi-inves-group {
+      // height: 300px;
+      padding-bottom: 10px;
+  }
+    .ladi-inves-img{
+      height: 97%;
+      width: 97%;
+      &__bg{
+        height: 92%;
+        width: 285px;
+      }
+    }
+    .ladi-inves-boxline{
+      width: 183.366px;
+      height: 96.8%;
+  }   
+  .ladi-inves-boxwhite{
+    width: 200.987px;
+    height: 100%;
+    background-color: #fff;
+  }
+  .ladi-inves-boxslide {
+    top: 122px;
+    left: 150px;
+    height: 143.872px;
+    width: 171.245px;
+  }
+  .ladi-inves-imgside {
+  top: 5px;
+  left: 5px;
+  }
+  .ladi-inves-line {
+      height: 52px;
+  }
+  .ladi-inves-shape {
+    margin-bottom: 35px;
+}
+  .ladi-inves-paragraph{
+    font-size: 11px;
+    margin-bottom: 5px;
+    width: 95%;
+  }
+    
+    .btn-language{
+      display: none;
+    }
+    
+    .ladi-item-warp {
+      width: 150px;
+  }
+
+  .ladi-item-tiltle {
+    h3 {
+    font-size: 13px;
+  }
+  }
+
+  
+    
+    .ladi-service-wrap{
+      padding-bottom: 0;
+      padding: 30px 30px 0;
+    }
+
+    .ladi-service-des {
+      p{
+        font-size: 13px;
+      }
+    }
+
+    .ladi-service-group{
+      &__block{
+          left: 350%;
+      }
+
+      &__icon{
+
+          left: 380%;
+      }
+    }
+
+    .ladi-service-list{
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+    }
+    .ladi-service-col{
+      width: 45px;
+      margin-left: 0px;
+    }
+    .ladi-service-content{
+      &__img{
+          height: 250px;
+      }
+    }
+    .ladi-service-headerline{
+      h6 {
+        margin-top: 20px;
+    }}
+    .ladi-service-textline{
+        height: 85px;
+    }
+
+    .ladi-port {
+        height: 500px;
+    }
+    .ladi-port-cap{
+      padding: 0 40px 0;
+      display: block;
+    }
+    .ladi-port-cap-header{
+      width: 100%;
+      margin-top: 30px;
+    }
+  .ladi-port-cap-img{
+    height: 165px;
+  }
+  .ladi-port-cap-content{
+    flex-wrap: wrap;
+    margin-top: 0;
+    width: 100%;
+  }
+  .ladi-port-cap-elememt{
+    width: 100%;
+  }
+  .ladi-port-cap-des{
+    h6{
+      font-size: 14px;
+    }
+    &__content{
+      height: 100px;
+    }
+    
+  }
+
+  .ladi-port-line{
+    margin-bottom: 10px;
+  }
+
+  .ladi-support-group {
+    // height: 336.3px;
+    display: block;
+  }
+  .ladi-support-option{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .ladi-support-block{
+    margin-top: 10px;
+  }
+  .ladi-support-calculator{
+    width: 90%;
+    height: 85%;
+    margin-left: 30px;
+  }
+  .ladi-support-calculator__bgimg {
+    width: 90%;
+    height: 70%;
+  }
+
+  .ladi-support-block__rectangle {
+    width: 190px;
+    h3{
+      padding: 11px 0 0 20px;
+      font-size: 12px;
+    }
+  }
+
+  .ladi-support-block__circle {
+    margin-left: -150px;
+  }
+  .ladi-partner-group{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .ladi-partner-group-row{
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .ladi-partner-group-logo{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+
+    &__img1{
+      margin: 0;
+     }
+
+    &__img7{
+     margin: 0;
+    }
+  }
+
+  .ladi-footer-contact-row{
+    flex-wrap: wrap;
+  }
+  .ladi-footer-contact-col{
+    margin-top: 10px;
+    h6{
+      margin-bottom: 5px;
+    }
+  }
+
+  .ladi-footer-connect{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .ladi-footer-phone{
+    width: 100%;
+    padding-left: 0;
+  }
+  .ladi-footer-email{
+    width: 100%;
+    padding-left: 0px;
+  }
+  .ladi-footer-follow{
+    width: auto;
+    margin-top: 10px;
+    padding-left: 0px;
+  }
+
+  
+
+  .ladi-footer-wrap{
+    padding: 40px 40px 0;
+    
+  }
+  .ladi-footer-contact-col{
+    margin-right: 0px;
+  }
+  }
+  @include mobile1(){  
+    padding: 0;
+    max-width: 100%;
+    .ladi-nav{
+      display: none;
+      position: absolute;
+      top: 77px;
+      right: 0;
+      margin: 0;
+
+      width: 100%;
+      height: 100vh;
+
+      background: rgba($color: #ccc, $alpha: 0.3);
+
+      z-index: 1;
+      &__click{
+        position: absolute;
+        width: 50%;
+        height: 100%;
+      }
+      &__ul{
+        position: absolute;
+        right: 0;
+        width: 50%;
+        height: 100%;
+        background-color: #fff;
+      }
+      &__intro{
+        box-sizing: border-box;
+        display: block;
+        width: 100%;
+        height: auto;
+        padding: 10px 20px;
+        z-index: 1;
+        font-size: 18px;
+        border-bottom: 1px solid #ccc;
+      }
+      &__intro::after{
+          display: none ;
+      }
+    }
+
+    .modal-service{
+      position: static;
+      width: 100%;
+      .modal-li{
+        height: auto;
+        display: block;
+        width: 100%;
+        font-size: 18px;
+
+        a{
+          height: 40px;
+          line-height: 40px;
+        }
+      }
+    }
+
+    .modal-service1{
+      position: static;
+      width: 100%;
+      .modal-li1{
+        width: 100%;
+      }
+      
+    }
+    .ladi-btn-nav{
+      justify-content: flex-start;
+    }
+    .ladi-header-wrap{
+      position: static;
+    }
+    .ladi-header-menu{  
+      display: block;
+    }
+
+    .ladi-description {
+      padding: 0 40px;
+
+      &__header{
+        h1{
+          font-size: 25px;
+        }
+      }
+      &__content{
+        width: auto;
+        top: 70px;
+        p{
+          font-size: 16px;
+        }
+      }
+    }
+
+
+    .ladi-introduce-row{
+      box-sizing: border-box;
+      padding: 40px 40px;
+      display: block;
+    }
+    .ladi-introduce-col{
+      width: 100%;
+      margin-bottom: 10px;
+    }
+    .ladi-introduce-list {
+      margin-left: 40px;
+    }  
+    .ladi-introduce-content{
+      p{
+        font-size: 14px;
+      }
+    }
+    
+    
+    .ladi-img3-introduce {
+        height: 277px;
+        width: 100%;
+    }
+    .ladi-row{
+      width: 100%;
+      .ladi-col{
+        width: 50%;
+      }
+    }
+    
+
+    .ladi-inves-wrap{
+      padding: 30px 40px;
+      display: block;
+
+    }
+
+    .ladi-inves {
+      height: 530.9px;
+  }
+  .ladi-inves-content{
+    width: 100%;
+    &__title {
+      width: 100%;
+    }
+  }
+
+    .ladi-inves-silde{
+      width: 100%;
+      height: 245px;
+      top: 0;
+      padding-bottom: 10px;
+      align-content: center;
+    }
+  
+    .ladi-inves-group {
+      // height: 300px;
+      padding-bottom: 10px;
+  }
+    .ladi-inves-img{
+      height: 97%;
+      width: 97%;
+      &__bg{
+        height: 92%;
+        width: 285px;
+      }
+    }
+    .ladi-inves-boxline{
+      width: 183.366px;
+      height: 96.8%;
+  }   
+  .ladi-inves-boxwhite{
+    width: 200.987px;
+    height: 100%;
+    background-color: #fff;
+  }
+  .ladi-inves-boxslide {
+    top: 122px;
+    left: 150px;
+    height: 143.872px;
+    width: 171.245px;
+  }
+  .ladi-inves-imgside {
+  top: 5px;
+  left: 5px;
+  }
+  .ladi-inves-line {
+      height: 52px;
+  }
+  .ladi-inves-shape {
+    margin-bottom: 35px;
+}
+  .ladi-inves-paragraph{
+    font-size: 11px;
+    margin-bottom: 5px;
+    width: 95%;
+  }
+    
+    .btn-language{
+      display: none;
+    }
+    
+    .ladi-item-warp {
+      width: 150px;
+  }
+
+  .ladi-item-tiltle {
+    h3 {
+    font-size: 13px;
+  }
+  }
+
+  
+    
+    .ladi-service-wrap{
+      padding-bottom: 0;
+      padding: 30px 30px 0;
+    }
+
+    .ladi-service-des {
+      p{
+        font-size: 13px;
+      }
+    }
+
+    .ladi-service-group{
+      &__block{
+          left: 350%;
+      }
+
+      &__icon{
+
+          left: 380%;
+      }
+    }
+
+    .ladi-service-list{
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+    }
+    .ladi-service-col{
+      width: 45px;
+      margin-left: 0px;
+    }
+    .ladi-service-content{
+      &__img{
+          height: 250px;
+      }
+    }
+    .ladi-service-headerline{
+      h6 {
+        margin-top: 20px;
+    }}
+    .ladi-service-textline{
+        height: 85px;
+    }
+
+    .ladi-port {
+        height: 500px;
+    }
+    .ladi-port-cap{
+      padding: 0 40px 0;
+      display: block;
+    }
+    .ladi-port-cap-header{
+      width: 100%;
+      margin-top: 30px;
+    }
+  .ladi-port-cap-img{
+    height: 165px;
+  }
+  .ladi-port-cap-content{
+    flex-wrap: wrap;
+    margin-top: 0;
+    width: 100%;
+  }
+  .ladi-port-cap-elememt{
+    width: 100%;
+  }
+  .ladi-port-cap-des{
+    h6{
+      font-size: 14px;
+    }
+    &__content{
+      height: 100px;
+    }
+    
+  }
+
+  .ladi-port-line{
+    margin-bottom: 10px;
+  }
+
+  .ladi-support-group {
+    // height: 336.3px;
+    display: block;
+  }
+  .ladi-support-option{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+
+  .ladi-support-block{
+    margin-top: 10px;
+  }
+  .ladi-support-calculator{
+    width: 90%;
+    height: 85%;
+    margin-left: 30px;
+  }
+  .ladi-support-calculator__bgimg {
+    width: 90%;
+    height: 70%;
+  }
+
+  .ladi-support-block__rectangle {
+    width: 190px;
+    h3{
+      padding: 11px 0 0 20px;
+      font-size: 12px;
+    }
+  }
+
+  .ladi-support-block__circle {
+    margin-left: -150px;
+  }
+  .ladi-partner-group{
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .ladi-partner-group-row{
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .ladi-partner-group-logo{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+
+    &__img1{
+      margin: 0;
+     }
+
+    &__img7{
+     margin: 0;
+    }
+  }
+
+  .ladi-footer-contact-row{
+    flex-wrap: wrap;
+  }
+  .ladi-footer-contact-col{
+    margin-top: 10px;
+    h6{
+      margin-bottom: 5px;
+    }
+  }
+
+  .ladi-footer-connect{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .ladi-footer-phone{
+    width: 100%;
+    padding-left: 0;
+  }
+  .ladi-footer-email{
+    width: 100%;
+    padding-left: 0px;
   }
   .ladi-footer-follow{
     width: auto;
@@ -1158,7 +2431,7 @@ $desktop4-width: 950px;
 
 @include tablet2(){
   .ladi-header{
-    height: 100px !important;
+    position: relative !important;
   }
   .ladi-service-col {
     width: 45% !important;
@@ -1173,9 +2446,9 @@ $desktop4-width: 950px;
 }
 
 @include tablet3(){
-  // .ladi-header{
-  //   height: 100px !important;
-  // }
+  .ladi-header{
+    position: relative !important;
+  }
   .ladi-service-col {
     width: 100% !important;
   }
@@ -1190,6 +2463,137 @@ $desktop4-width: 950px;
   .ladi-popup-content{
     p{
       font-size: 12px !important;
+    }
+  }
+  .ladi-video {
+    height: 335px !important;
+}
+.ladi-partner{
+  height: auto !important;
+}
+.ladi-background-img {
+  background-position: center !important; 
+}
+
+}
+@include tablet4(){
+  .ladi-header{
+    position: relative !important;
+  }
+  .ladi-service-col {
+    width: 100% !important;
+  }
+  .ladi-popup-container {
+    width: 475px !important;
+  }
+  .ladi-popup-img__bg {
+    height: 293px !important;
+    top: 84 !important;
+    width: 200px !important;
+  }
+  .ladi-popup-content{
+    p{
+      font-size: 12px !important;
+    }
+  }
+  .ladi-video {
+    height: 335px !important;
+}
+.ladi-partner{
+  height: auto !important;
+}
+.ladi-background-img {
+  background-position: center !important; 
+}
+
+}
+@include mobile(){
+  .ladi-header{
+    position: relative !important;
+  }
+  .ladi-service-col {
+    width: 100% !important;
+  }
+  .ladi-popup-container {
+    width: 475px !important;
+    height: 340px !important  ;
+    h2{
+      font-size: 20px !important;
+    }
+
+  }
+  .ladi-popup-img{
+    &__shape{
+      width: 158px !important;
+      height: 199px !important;
+    }
+
+    &__bg{
+      top: 75px !important;
+      width: 155px !important;
+      height: 229px !important;
+    }
+  }
+  .ladi-pbg {
+
+    top: 84 !important;
+    width: 200px !important;
+  }
+  .ladi-popup-content{
+    padding: 15px !important;
+    p{
+      margin-top: 10px !important;
+      font-size: 11px !important;
+    }
+  }
+  .ladi-video {
+    height: 335px !important;
+}
+.ladi-partner{
+  height: auto !important;
+}
+.ladi-background-img {
+  background-position: center !important; 
+}
+
+}
+@include mobile1(){
+  .ladi-header{
+    position: relative !important;
+  }
+  .ladi-service-col {
+    width: 100% !important;
+  }
+  .ladi-popup-container {
+    width: 475px !important;
+    height: 340px !important  ;
+    h2{
+      font-size: 20px !important;
+    }
+
+  }
+  .ladi-popup-img{
+    &__shape{
+      width: 158px !important;
+      height: 199px !important;
+    }
+
+    &__bg{
+      top: 75px !important;
+      width: 155px !important;
+      height: 229px !important;
+    }
+  }
+  .ladi-pbg {
+
+    top: 84 !important;
+    width: 200px !important;
+  }
+  .ladi-popup-content{
+    padding: 15px !important;
+    p{
+      margin-top: 10px !important;
+      font-size: 11px !important;
     }
   }
   .ladi-video {
