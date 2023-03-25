@@ -1,9 +1,8 @@
 import React, { useState } from "react";
-import PropTypes from "prop-types";
-import "./Header.scss";
 import BtnLadiNav from "../../../components/BtnLadiNav";
 import Button from "../../../components/Button";
 import RegisterInfo from "../../../components/RegisterInfo";
+import "./Header.scss";
 
 Header.propTypes = {};
 
@@ -17,7 +16,6 @@ function Header(props) {
   function hanleOutMenu(){
     setMenu(false)
   }
-
   function handleClickModal() {
     setActive(true);
   }
